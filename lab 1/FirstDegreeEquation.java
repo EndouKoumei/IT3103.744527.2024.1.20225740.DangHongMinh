@@ -28,5 +28,6 @@ public class FirstDegreeEquation {
             JOptionPane.showMessageDialog(null, strNotification, "Your input", JOptionPane.INFORMATION_MESSAGE);
             JOptionPane.showMessageDialog(null, "The solution is x = " + solution, "Solution", JOptionPane.INFORMATION_MESSAGE);
         }
+        System.exit(0);
     }
 }

@@ -31,5 +31,6 @@ public class FirstDegreeSystem {
                 JOptionPane.showMessageDialog(null, "The system has no solution.", "No Solution!", JOptionPane.INFORMATION_MESSAGE);
             }
         }
+        System.exit(0);
     }
 }
