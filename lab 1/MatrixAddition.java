@@ -1,4 +1,4 @@
-//Dang Hong Minh -20225470
+//Dang Hong Minh - 20225470
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 public class MatrixAddition {
