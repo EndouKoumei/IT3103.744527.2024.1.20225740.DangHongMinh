@@ -1,5 +1,5 @@
 //Dang Hong Minh - 20225740
-//Example 2: First Dialog.java
+//Example 2: FirstDialog.java
 import javax.swing.JOptionPane;
 public class FirstDialog {
     public static void main(String[] args) {
