@@ -19,7 +19,7 @@ public class Aims {
         cart.addDigitalVideoDisc(dvd5);
        	//Test remove
 		cart.removeDigitalVideoDisc(dvd2);
-		//remove failed
+		//Remove failed
 		cart.removeDigitalVideoDisc(dvd2);
         //Test add
 		cart.addDigitalVideoDisc(dvd2);
