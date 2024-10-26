@@ -1,64 +1,29 @@
 //Dang Hong Minh - 20225740
 package lab2;
-import java.util.Scanner;
 public class Aims {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("\nAIMS Store Project:");
+        System.out.println("---by Dang Hong Minh - 20225740---");
+        // Create new cart
         Cart cart = new Cart();
-
-        while (true) {
-            System.out.println("\nAIMS Store Menu:");
-            System.out.println("1. Add a DVD to Cart");
-            System.out.println("2. Remove a DVD from Cart");
-            System.out.println("3. View Cart");
-            System.out.println("4. Calculate Total Cost");
-            System.out.println("5. Exit");
-            System.out.print("Choose an option: ");
-            
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
-
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter DVD title: ");
-                    String title = scanner.nextLine();
-                    System.out.print("Enter DVD category: ");
-                    String category = scanner.nextLine();
-                    System.out.print("Enter DVD cost: ");
-                    float cost = scanner.nextFloat();
-                    scanner.nextLine(); // Consume newline
-                    System.out.print("Enter DVD director: ");
-                    String director = scanner.nextLine();
-                    System.out.print("Enter DVD length: ");
-                    int length = scanner.nextInt();
-
-                    DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, cost, director, length);
-                    cart.addDVD(dvd);
-                    System.out.println("DVD added to cart.");
-                    break;
-
-                case 2:
-                    System.out.print("Enter the title of DVD to remove: ");
-                    String removeTitle = scanner.nextLine();
-                    cart.removeDVD(removeTitle);
-                    break;
-
-                case 3:
-                    cart.displayCart();
-                    break;
-
-                case 4:
-                    System.out.printf("Total cost of DVDs in cart: $%.2f%n", cart.calculateTotalCost());
-                    break;
-
-                case 5:
-                    System.out.println("Exiting AIMS Store. Thank you!");
-                    scanner.close();
-                    return;
-
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
-        }
-    }
+        // Create new DVD object and add to cart
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+		cart.addDigitalVideoDisc(dvd1);
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Sci-Fi", "George Lucas", 24.95f);
+		cart.addDigitalVideoDisc(dvd2);
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", 18.99f);
+		cart.addDigitalVideoDisc(dvd3);
+        DigitalVideoDisc dvd4 = new DigitalVideoDisc("Avatar", "Sci-Fi", 32.99f);
+        cart.addDigitalVideoDisc(dvd4);
+        DigitalVideoDisc dvd5 = new DigitalVideoDisc("Fate/Stay Night", "Animation", 12.99f);
+        cart.addDigitalVideoDisc(dvd5);
+       	//Test remove
+		cart.removeDigitalVideoDisc(dvd2);
+		//remove failed
+		cart.removeDigitalVideoDisc(dvd2);
+        //Test add
+		cart.addDigitalVideoDisc(dvd2);
+		//Print total cost of the cart
+		System.out.printf("Total = %.2f\n", cart.totalCost());
+	}
 }
