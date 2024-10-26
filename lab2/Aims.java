@@ -28,6 +28,8 @@ public class Aims {
 		cart.removeDigitalVideoDisc(dvd2);
         //Test add
 		cart.addDigitalVideoDisc(dvd2);
+		// Display all DVDs in the cart
+		cart.displayCart();
 		//Print total cost of the cart
 		System.out.printf("Total = %.2f\n", cart.totalCost());
 	}

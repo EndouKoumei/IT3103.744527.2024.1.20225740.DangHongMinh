@@ -38,6 +38,17 @@ public class Cart {
         //Disc not found
         System.out.println("ERROR! DVD not found in cart!");
     }
+    public void displayCart() {
+        System.out.println("\nCurrent DVDs in Cart:");
+        if (qtyOrdered == 0) {
+            System.out.println("The cart is empty.");
+        } else {
+            for (int i = 0; i < qtyOrdered; i++) {
+                DigitalVideoDisc dvd = itemOrdered[i];
+                System.out.printf("Title: %s | Cost: $%.2f%n", dvd.getTitle(), dvd.getCost());
+            }
+        }
+    }
     public float totalCost() {
         float totalCost = 0;
         for (int i = 0; i < qtyOrdered; i++) {
