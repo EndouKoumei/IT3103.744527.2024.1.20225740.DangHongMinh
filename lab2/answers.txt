@@ -1,0 +1,22 @@
+7.Reading Assignment
+- When should accessor methods be used?
+(Khi nào thì nên sử dụng các phương thức truy cập (accessor methods)?)
+- Vấn đề cốt lõi:
+• Vi phạm tính đóng gói: Holub lập luận rằng các phương thức truy cập phá vỡ tính đóng gói của lớp bằng cách tiết lộ trạng thái bên trong, biến đối tượng thành nơi chứa dữ liệu thay vì là thành phần có hành vi riêng.
+• Vấn đề sử dụng quá mức: Việc lạm dụng getter và setter có thể khiến đối tượng trở nên "nghèo nàn" (chỉ chứa dữ liệu mà không có hành vi rõ ràng).
+- Những lý do hạn chế sử dụng getter và setter:
+• Tăng phụ thuộc: Getter và setter khiến các lớp khác phụ thuộc vào chi tiết bên trong, làm cho hệ thống khó thay đổi.
+• Khuyến khích mã hóa theo thủ tục: Getter và setter có xu hướng biến mã thành lập trình theo thủ tục thay vì lập trình hướng đối tượng.
+- Khi nào nên sử dụng getter và setter:
+• Data Transfer Object (DTO): Trong các đối tượng truyền dữ liệu (DTO) – nơi chỉ đơn thuần truyền dữ liệu giữa các lớp – việc sử dụng getter và setter là hợp lý.
+• Đối tượng bất biến (Immutable Objects): Với các đối tượng bất biến, getter hữu ích vì không có setter, đảm bảo trạng thái không bị thay đổi từ bên ngoài.
+• Tiếp cận có kiểm soát: Nếu cần thiết phải tiết lộ một phần trạng thái và phương pháp thay thế phức tạp hơn, getter có thể là lựa chọn hợp lý.
+- Cách sử dụng tốt nhất:
+• Sử dụng phương thức theo hướng hành vi: Thay vì tiết lộ các trường với getter và setter, tạo ra các phương thức thực hiện hành động cần thiết trong chính lớp đó.
+• Duy trì tính đóng gói: Đảm bảo tính đóng gói bằng cách giữ các thuộc tính ở chế độ private và chỉ tiết lộ thông tin thực sự cần thiết.
+• Hạn chế hoặc loại bỏ setter trong các đối tượng có thể thay đổi: Khi có thể, giảm hoặc loại bỏ setter, đặc biệt trong các lớp cần thay đổi trạng thái sau khi khởi tạo.
+- Kết luận: Getter và setter có thể gây hại nếu chúng biến đối tượng thành nơi chứa dữ liệu mà không có hành vi cụ thể. Chỉ nên sử dụng chúng trong các lớp có mục đích chứa dữ liệu, như DTO hoặc các cấu trúc bất biến. Luôn xem xét các phương pháp thay thế có thể.
+8. Answer the question
+- If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this?
+Nếu tạo một phương thức khởi tạo (constructor) để tạo DVD theo tiêu đề, sau đó tạo một phương thức khởi tạo khác để tạo DVD theo thể loại thì Java có cho phép làm điều này không?
+• Có, Java cho phép tạo nhiều phương thức khởi tạo (constructor) trong cùng một lớp với điều kiện các constructor này phải có tham số khác nhau (số lượng, kiểu dữ liệu hoặc thứ tự của các tham số). Đây được gọi là tính năng nạp chồng phương thức (method overloading). Vì vậy, có thể tạo một constructor để khởi tạo DVD theo tiêu đề và một constructor khác để khởi tạo DVD theo thể loại mà không gặp xung đột trong Java, miễn là các tham số khác nhau.
