@@ -58,19 +58,30 @@ public class DigitalVideoDisc {
     public float getCost() {
     	return cost;
     }
-    public String getDirector() {
-    	return director;
-    }
-    public int getLength() {
-    	return length;
-    }
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    public int getId(){
+    public String getDirector(){
+		return director;
+	}
+	public int getLength(){
+		return length;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public int getId() {
 		return id;
 	}
-    public static int getNbDigitalVideoDiscs() {
-        return nbDigitalVideoDiscs;
+	public String toString() {
+        return String.format("%d. %s - %s - %s - %d: %.2f$", getId(), getTitle(), getCategory(),
+        getDirector(), getLength(), getCost());
     }
+    public boolean isMatch(int id) {
+ 		return this.id == id;
+ 	}
+    public boolean isMatch(String title) {
+		String[] tmp = title.split(" ", 0);
+		for (String x : tmp) {
+			if (getTitle().toLowerCase().contains(x.toLowerCase())) return true;
+		}
+		return false;
+	}
 }
