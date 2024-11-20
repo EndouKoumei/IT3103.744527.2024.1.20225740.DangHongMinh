@@ -1,5 +1,5 @@
 //Dang Hong Minh - 20225740
-package lab3;
+package lab3.AimsProject;
 public class DigitalVideoDisc {
     //Attribute
     private String title;

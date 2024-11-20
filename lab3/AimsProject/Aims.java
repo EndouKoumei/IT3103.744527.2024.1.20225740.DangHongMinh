@@ -1,5 +1,6 @@
 //Dang Hong Minh - 20225740
 package lab3;
+
 public class Aims {
     public static void main(String[] args) {
         System.out.println("\nAIMS Store Project:");

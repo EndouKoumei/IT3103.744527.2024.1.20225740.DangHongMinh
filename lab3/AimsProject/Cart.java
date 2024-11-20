@@ -1,5 +1,6 @@
 //Dang Hong Minh - 20225740
-package lab3;
+package lab3.AimsProject;
+
 public class Cart {
     public static final int MAX_ITEMS = 20;
     //Create cart
