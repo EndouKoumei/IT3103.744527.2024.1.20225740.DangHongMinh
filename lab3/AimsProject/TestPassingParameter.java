@@ -1,6 +1,5 @@
 //Dang Hong Minh - 20225740
 package lab3.AimsProject;
-import lab2.DigitalVideoDisc;
 public class TestPassingParameter {
 	public static void main (String[] args) {
         //TO DO Auto-generated method stub
