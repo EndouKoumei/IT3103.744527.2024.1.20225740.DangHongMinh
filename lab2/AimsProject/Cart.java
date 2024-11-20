@@ -1,5 +1,5 @@
 //Dang Hong Minh - 20225740
-package lab2;
+package lab2.AimsProject;
 public class Cart {
     public static final int MAX_ITEMS = 20;
     //Create cart
