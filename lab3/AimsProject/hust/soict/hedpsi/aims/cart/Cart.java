@@ -1,5 +1,6 @@
 //Dang Hong Minh - 20225740
-package lab3.AimsProject;
+package lab3.AimsProject.hust.soict.hedpsi.aims.cart;
+import lab3.AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
 public class Cart {
     public static final int MAX_ITEMS = 20;
     //Create cart

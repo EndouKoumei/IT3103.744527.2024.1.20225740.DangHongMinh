@@ -1,5 +1,6 @@
 //Dang Hong Minh - 20225740
-package lab3.AimsProject;
+package lab3.AimsProject.hust.soict.hedpsi.aims.store;
+import lab3.AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
 public class Store {
     private DigitalVideoDisc itemInStore[];
     private int numberOfItems;

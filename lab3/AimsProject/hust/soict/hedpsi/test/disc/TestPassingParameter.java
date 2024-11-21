@@ -1,5 +1,6 @@
 //Dang Hong Minh - 20225740
-package lab3.AimsProject;
+package lab3.AimsProject.hust.soict.hedpsi.test.disc;
+import lab3.AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
 public class TestPassingParameter {
 	public static void main (String[] args) {
         //TO DO Auto-generated method stub

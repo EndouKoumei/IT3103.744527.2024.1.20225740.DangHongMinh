@@ -1,5 +1,7 @@
 //Dang Hong Minh - 20225740
-package lab3.AimsProject;
+package lab3.AimsProject.hust.soict.hedpsi.test.store;
+import lab3.AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
+import lab3.AimsProject.hust.soict.hedpsi.aims.store.Store;
 public class StoreTest {
     public static void main(String[] args) {
         //Create new store with a 5 DVDs max and add DVD to the store
