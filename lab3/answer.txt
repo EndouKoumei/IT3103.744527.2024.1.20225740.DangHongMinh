@@ -1,0 +1,14 @@
+2. Working with method overloading
+2.1. Overloading by differing types of parameter
+- Which method do you prefer in this case?
+=> Since we can compile only one method, I prefer variable-argument parameter method. Array method is more readable and easier to understand. But variable-argument method is more convenient for testing purpose.
+3. Passing parameter
+- After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+=> After the call of swap(), the title of these two objects still remains because the swap() method only swaps the references to the objects, not the objects themselves. This means that after the call to swap(), o1 and o2 still refer to the same objects as they did before the call.
+- After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+=> After the call of changeTitle(), the title of the DVD is changed because the setTitle(title) method changes the title by value directly. The dvd = new DigitalVideoDisc(oldTitle) creates a new DVD object with the old title. It does not affect the original dvd object as the reference variable no longer points to the original object.
+- Is Java a Pass-by-value or Pass-by-reference?
+=> In conclusion, Java is always a pass-by-value programming language.
+6. Open the Cart class
+- Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method?
+=> The return type of the toString() method should always be String.
