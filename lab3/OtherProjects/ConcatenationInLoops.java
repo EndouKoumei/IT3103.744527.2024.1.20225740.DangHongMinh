@@ -8,7 +8,6 @@ public class ConcatenationInLoops {
 		for(int i = 0;i < 65536;i++)
 			s += r.nextInt(2);
 		System.out.println(System.currentTimeMillis() - start);
-		
 		r = new Random(123);
 		start = System.currentTimeMillis();
 		StringBuilder sb = new StringBuilder();
@@ -16,5 +15,6 @@ public class ConcatenationInLoops {
 			sb.append(r.nextInt(2));
 		s = sb.toString();
 		System.out.println(System.currentTimeMillis()- start);
+		System.out.println("Length of string s: " + s.length());
 	}
 }
