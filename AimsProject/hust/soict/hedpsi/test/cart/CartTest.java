@@ -1,7 +1,7 @@
 //Dang Hong Minh - 20225740
-package lab3.AimsProject.hust.soict.hedpsi.test.cart;
-import lab3.AimsProject.hust.soict.hedpsi.aims.cart.Cart;
-import lab3.AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
+package AimsProject.hust.soict.hedpsi.test.cart;
+import AimsProject.hust.soict.hedpsi.aims.cart.Cart;
+import AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
 public class CartTest {
     	public static void main(String[] args){
 		Cart cart = new Cart();
