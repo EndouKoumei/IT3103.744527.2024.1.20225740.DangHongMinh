@@ -1,4 +1,5 @@
 //Dang Hong Minh - 20225740
+package OtherProjects;
 import java.util.Scanner;
 public class InputFromKeyboard {
     public static void main(String[] args) {

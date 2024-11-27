@@ -1,5 +1,6 @@
 //Dang Hong Minh - 20225740
 //Example 4: ShowTwoNumbers.java
+package OtherProjects;
 import javax.swing.JOptionPane;
 public class ShowTwoNumbers {
     public static void main(String[] args) {

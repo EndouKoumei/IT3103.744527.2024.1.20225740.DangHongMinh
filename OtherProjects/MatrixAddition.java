@@ -1,4 +1,5 @@
 //Dang Hong Minh - 20225470
+package OtherProjects;
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 public class MatrixAddition {

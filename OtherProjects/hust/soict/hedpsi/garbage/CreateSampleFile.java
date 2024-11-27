@@ -1,4 +1,5 @@
 //Dang Hong Minh - 20225740
+package OtherProjects.hust.soict.hedpsi.garbage;
 import java.io.FileOutputStream;
 import java.io.IOException;
 public class CreateSampleFile {

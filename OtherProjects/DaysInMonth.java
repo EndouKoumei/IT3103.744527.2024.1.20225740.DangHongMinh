@@ -1,4 +1,5 @@
 //Dang Hong Minh - 20225740
+package OtherProjects;
 import javax.swing.JOptionPane;
 public class DaysInMonth {
     public static void main(String[] args) {

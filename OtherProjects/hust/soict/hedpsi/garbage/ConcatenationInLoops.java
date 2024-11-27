@@ -1,4 +1,5 @@
 //Dang Hong Minh - 20225740
+package OtherProjects.hust.soict.hedpsi.garbage;
 import java.util.Random;
 public class ConcatenationInLoops {
 	public static void main(String[] args) {

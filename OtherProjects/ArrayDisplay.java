@@ -1,4 +1,5 @@
 //Dang Hong Minh - 20225740
+package OtherProjects;
 import javax.swing.JOptionPane;
 import java.util.Arrays;
 public class ArrayDisplay {
