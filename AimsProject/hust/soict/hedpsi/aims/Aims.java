@@ -1,7 +1,7 @@
 //Dang Hong Minh - 20225740
-package lab3.AimsProject.hust.soict.hedpsi.aims;
-import lab3.AimsProject.hust.soict.hedpsi.aims.cart.Cart;
-import lab3.AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
+package AimsProject.hust.soict.hedpsi.aims;
+import AimsProject.hust.soict.hedpsi.aims.cart.Cart;
+import AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
 public class Aims {
     public static void main(String[] args) {
         System.out.println("\nAIMS Store Project:");

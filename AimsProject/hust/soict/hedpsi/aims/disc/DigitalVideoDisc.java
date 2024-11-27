@@ -1,5 +1,5 @@
 //Dang Hong Minh - 20225740
-package lab3.AimsProject.hust.soict.hedpsi.aims.disc;
+package AimsProject.hust.soict.hedpsi.aims.disc;
 public class DigitalVideoDisc {
     //Attribute
     private String title;
