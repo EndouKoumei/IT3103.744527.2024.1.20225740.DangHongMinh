@@ -1,5 +1,6 @@
 //Dang Hong Minh - 20225740
 //Example 5: Calculator.java
+package OtherProjects;
 import javax.swing.JOptionPane;
 public class Calculator {
     public static void main(String[] args) {

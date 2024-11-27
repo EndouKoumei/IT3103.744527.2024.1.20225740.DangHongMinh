@@ -1,4 +1,5 @@
 //Dang Hong Minh - 20225740
+package OtherProjects.hust.soict.hedpsi.garbage;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 public class GarbageCreator {
