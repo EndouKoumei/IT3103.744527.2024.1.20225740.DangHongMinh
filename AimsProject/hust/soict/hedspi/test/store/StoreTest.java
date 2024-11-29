@@ -1,7 +1,7 @@
 //Dang Hong Minh - 20225740
-package AimsProject.hust.soict.hedpsi.test.store;
-import AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
-import AimsProject.hust.soict.hedpsi.aims.store.Store;
+/*package AimsProject.hust.soict.hedspi.test.store;
+import AimsProject.hust.soict.hedspi.aims.media.DigitalVideoDisc;
+import AimsProject.hust.soict.hedspi.aims.store.Store;
 public class StoreTest {
     public static void main(String[] args) {
         //Create new store with a 5 DVDs max and add DVD to the store
@@ -22,9 +22,9 @@ public class StoreTest {
         store.removeDVD(dvd2);
         // Remove failed
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("Harry Potter",
-        "Fiction", 18.99f);
+        "Fiction", null, 18.99f);
         store.removeDVD(dvd4);
         //Display the updated store
         store.displayStore();
     }
-}
+}*/

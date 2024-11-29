@@ -1,6 +1,6 @@
 //Dang Hong Minh - 20225740
-package AimsProject.hust.soict.hedpsi.test.disc;
-import AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
+/*package AimsProject.hust.soict.hedspi.test.disc;
+import AimsProject.hust.soict.hedspi.aims.media.DigitalVideoDisc;
 public class TestPassingParameter {
 	public static void main (String[] args) {
         //TO DO Auto-generated method stub
@@ -12,11 +12,11 @@ public class TestPassingParameter {
 		changeTitle(jungleDVD, cinderellaDVD.getTitle());
 		System.out.println("Jungle DVD's title: " + jungleDVD.getTitle());
 	}
-	/*public static void swap(Object o1, Object o2) {
-		Object tmp = o1;
-		o1 = o2;
-		o2 = tmp;
-	}*/
+	//public static void swap(Object o1, Object o2) {
+	//	Object tmp = o1;
+	//	o1 = o2;
+	//	o2 = tmp;
+	//}
 	//A swap() method that can correctly swap the two objects.
 	//Hint: Swap attributes of two objects
     public static void swap(DigitalVideoDisc o1, DigitalVideoDisc o2){
@@ -29,4 +29,4 @@ public class TestPassingParameter {
 		dvd.setTitle(title);
 		dvd = new DigitalVideoDisc(oldTitle);
 	}
-}
+}*/

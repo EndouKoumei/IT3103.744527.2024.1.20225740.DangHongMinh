@@ -1,7 +1,7 @@
 //Dang Hong Minh - 20225740
-package AimsProject.hust.soict.hedpsi.test.cart;
-import AimsProject.hust.soict.hedpsi.aims.cart.Cart;
-import AimsProject.hust.soict.hedpsi.aims.disc.DigitalVideoDisc;
+/*package AimsProject.hust.soict.hedspi.test.cart;
+import AimsProject.hust.soict.hedspi.aims.cart.Cart;
+import AimsProject.hust.soict.hedspi.aims.media.DigitalVideoDisc;
 public class CartTest {
     	public static void main(String[] args){
 		Cart cart = new Cart();
@@ -16,3 +16,4 @@ public class CartTest {
 		cart.searchCart(1);
 	}
 }
+*/
