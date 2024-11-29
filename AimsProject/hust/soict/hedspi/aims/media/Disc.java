@@ -26,4 +26,6 @@ public class Disc extends Media {
 	public void setDirector(String director) {
 		this.director = director;
 	}
+	public void play() {
+	}
 }
