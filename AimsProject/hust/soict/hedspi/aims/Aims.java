@@ -11,9 +11,9 @@ public class Aims {
 	public static void showMenu() {
 		System.out.println("\nAIMS Store Project:");
 		System.out.println("---by Dang Hong Minh - 20225740---");
-		System.out.println("1.View store");
-		System.out.println("2.Update store");
-		System.out.println("3.See current cart");
+		System.out.println("1. View store");
+		System.out.println("2. Update store");
+		System.out.println("3. See current cart");
 		System.out.println("0. Exit");
 		System.out.println("--------------------------------");
 		System.out.println("Please choose a number: 0-1-2-3");
@@ -22,11 +22,11 @@ public class Aims {
 		System.out.println("---by Dang Hong Minh - 20225740---");
 		System.out.println("Options:");
 		System.out.println("--------------------------------");
-		System.out.println("1.See a media's details");
-		System.out.println("2.Add a media to cart");
-		System.out.println("3.Play a media");
-		System.out.println("4.See current cart");
-		System.out.println("0.Back");
+		System.out.println("1. See a media's details");
+		System.out.println("2. Add a media to cart");
+		System.out.println("3. Play a media");
+		System.out.println("4. See current cart");
+		System.out.println("0. Back");
 		System.out.println("--------------------------------");
 		System.out.println("Please choose a number: 0-1-2-3-4");
 	}
@@ -67,7 +67,7 @@ public class Aims {
 	    }
 	    storeMenu();
 	    while (true) {
-	        System.out.println("Enter your option:"); // Add this prompt
+	        System.out.println("Enter your option:");
 	        int option = aims.nextInt();
 	        aims.nextLine();
 	        switch (option) {
@@ -88,7 +88,6 @@ public class Aims {
 	                break;
 	            case 0:
 	                System.out.println("Back to AIMS...");
-	                showMenu();
 	                return;
 	            default:
 	                System.out.println("Invalid option. Please try again.");
@@ -99,7 +98,7 @@ public class Aims {
 	public static void viewCurrentCart(Scanner aims) {
 	    cartMenu();
 	    while (true) {
-	        System.out.println("Enter your option:"); // Add this prompt
+	        System.out.println("Enter your option:");
 	        int option = aims.nextInt();
 	        aims.nextLine();
 	        switch (option) {
@@ -120,11 +119,10 @@ public class Aims {
 	                cartMenu();
 	                break;
 	            case 5:
-	                placeOrder();
+	                placeOrder(aims);
 	                break;
 	            case 0:
 	                System.out.println("Back to AIMS...");
-	                showMenu();
 	                return;
 	            default:
 	                System.out.println("Invalid option! Please try again.");
@@ -179,9 +177,9 @@ public class Aims {
 	                }
 	                break;
 	            case 0:
-	            	showMenu();
-	            	return;
-	            default:
+					System.out.println("Back to AIMS...");
+                	return;
+				default:
 	                System.out.println("Invalid option! Please try again.");
 	                break;
 	        }
@@ -192,13 +190,37 @@ public class Aims {
 		String title = aims.nextLine();
 		int found = findIndex(title, store);
 		if (found == -1) {
-			System.out.println("Can not find the media!");
+			System.out.println("Cannot find the media!");
+		} else {
+			Media media = store.getItemsInStore().get(found);
+			System.out.println(media.toString()); //Print media details
+			//Display media details menu and process user input
+			while (true) {
+				mediaDetailsMenu(media);
+				int option = aims.nextInt();
+				aims.nextLine();
+				switch (option) {
+					case 1:
+						cart.addMedia(media);
+						System.out.println("Added to cart successfully.");
+						break;
+					case 2:
+						if (media instanceof Disc) {
+							((Disc) media).play();
+						} else {
+							System.out.println("This media cannot be played.");
+						}
+						break;
+					case 0:
+						System.out.println("Returning to store menu...");
+						return;
+					default:
+						System.out.println("Invalid option. Please try again.");
+						break;
+				}
+			}
 		}
-		else {
-			store.getItemsInStore().get(found).toString();
-			mediaDetailsMenu(store.getItemsInStore().get(found));
-		}
-	}
+	}	
 	public static void addMediaCart(Scanner aims) {
 		System.out.println("Please enter the media's title: ");
 		String title = aims.nextLine();
@@ -214,36 +236,43 @@ public class Aims {
 	public static ArrayList<Media> filterMediaCart(Scanner aims) {
 		ArrayList<Media> filteredList = new ArrayList<>();
 		System.out.print("Choose an option to filter Media: ");
-		System.out.println("1: By title, 2: By id: ");
-		int option = aims.nextInt();
-		aims.nextLine();
+		System.out.println("1: By title, 2: By id:");
+		int option;
 		while (true) {
+			option = aims.nextInt();
+			aims.nextLine();
 			switch (option) {
 			case 1:
-				System.out.print("Please enter the title: ");
-				String title = aims.nextLine();
-				for (Media media: cart.getItemsInCart()) {
-					if (media.getTitle().toLowerCase().contains(title.toLowerCase())){
-						filteredList.add(media);
-					}
-				}
-				return filteredList;
+            System.out.println("Please enter the title: ");
+            String title = aims.nextLine();
+            for (Media media : cart.getItemsInCart()) {
+                if (media.getTitle().equalsIgnoreCase(title)) {
+                    filteredList.add(media);
+                }
+            }
+			System.out.println("Filtered media by title:");
+            for (Media media : filteredList) {
+                System.out.println(media.toString());
+            }
+			return filteredList;
 			case 2:
-				System.out.print("Please enter the id: ");
-				String id = aims.nextLine();
-				for (Media media: cart.getItemsInCart()) {
-					String idString = String.valueOf(media.getId());
-					if (id.equals(idString)) {
-						filteredList.add(media);
-					}
-				}
-				return filteredList;
+            System.out.println("Please enter the id: ");
+            String id = aims.nextLine();
+            for (Media media : cart.getItemsInCart()) {
+				String idString = String.valueOf(media.getId());
+                if (id.equals(idString)) {
+                    filteredList.add(media);
+                }
+            }
+			System.out.println("Filtered media by ID:");
+			System.out.println(filteredList.toString());
+			return filteredList;
 			}
 		}
 	}
 	public static List<Media> sortMediaCart(Scanner aims) {
 	    System.out.print("Please choose the option to sort media in cart: ");
-	    System.out.println("1: By title, 2: By id");
+	    System.out.println("1: By title, 2: By cost");
 	    int option;
 	    while (true) {
 	        option = aims.nextInt();
@@ -251,10 +280,18 @@ public class Aims {
 	        switch (option) {
 	            case 1:
 	                Collections.sort(cart.getItemsInCart(), Media.COMPARE_BY_TITLE_COST);
-	                return cart.getItemsInCart();
+					System.out.println("Cart sorted by title:");
+					for (Media media : cart.getItemsInCart()) {
+						System.out.println(media.toString());
+					}						
+					return cart.getItemsInCart();
 	            case 2:
 	                Collections.sort(cart.getItemsInCart(), Media.COMPARE_BY_COST_TITLE);
-	                return cart.getItemsInCart();
+					System.out.println("Cart sorted by cost:");
+					for (Media media : cart.getItemsInCart()) {
+						System.out.println(media.toString());
+					}	                
+					return cart.getItemsInCart();
 	            default:
 	                System.out.println("Invalid option. Please try again.");
 	                break;
@@ -265,15 +302,16 @@ public class Aims {
 		System.out.println("Please enter the media's title to remove: ");
 		String title = aims.nextLine();
 		int index = findIndex(title, cart);
-			if (index!=-1) {
-				cart.removeMedia(cart.getItemsInCart().get(index));
-			}
-			System.out.println("Can not find media in cart");	
+		if (index!=-1) {
+			cart.removeMedia(cart.getItemsInCart().get(index));
+		} else {
+		System.out.println("Can not find media in cart");
+		}
 	}
-	public static void placeOrder() {
+	public static void placeOrder(Scanner aims) {
 		System.out.println("Order is created!");
 		cart.getItemsInCart().clear();
-		showMenu();
+		cartMenu();
 	}
 	//Play media
 	public static void playMedia(Scanner aims, Store store) {
@@ -330,22 +368,21 @@ public class Aims {
 	}
 	public static int findIndex(String title, Cart cart) {
 		for (int i = 0; i < cart.getItemsInCart().size(); i++) {
-			// if (title == cart.getItemsInCart().get(i).getTitle()) {
-			if (store.getItemsInStore().get(i).getTitle().equals(title)) {
+			//if (title == cart.getItemsInCart().get(i).getTitle()) {
+			if (cart.getItemsInCart().get(i).getTitle().equals(title)) {
 				return i;
 			}
 		}
 		return -1;
 	}	
-	//main
+	//Main
 	public static void main(String[] args) {
-		CompactDisc test = new CompactDisc(1, "Test", "test", 1f);
-		CompactDisc cd = new CompactDisc(1,"The Fellowship of the Ring","Fantasy", 12.5f);
-	    DigitalVideoDisc dvd = new DigitalVideoDisc(2,"The Two Towers", "Fantasy", 222.22f);
-	    Book book = new Book(3,"The Return of the King", "Fantasy", 30f);
+		CompactDisc test = new CompactDisc(0, "Test", "test", 1f);
+		CompactDisc cd = new CompactDisc(1,"Fate","Fantasy", 12.5f);
+	    DigitalVideoDisc dvd = new DigitalVideoDisc(2,"Spy", "Fantasy", 222.22f);
+	    Book book = new Book(3,"Conan", "Fantasy", 30f);
 	    store.addMedia(cd); store.addMedia(dvd); store.addMedia(book);
 	    store.addMedia(test);
-	    cart.addMedia(test);
 	    //for (Media item : store.getItemsInStore()) {
 	    	//System.out.println(item.toString());
 	    //}
