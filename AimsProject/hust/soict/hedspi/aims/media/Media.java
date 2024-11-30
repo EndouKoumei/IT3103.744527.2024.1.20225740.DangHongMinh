@@ -3,7 +3,7 @@ package AimsProject.hust.soict.hedspi.aims.media;
 import java.util.*;
 public abstract class Media {
 	private int id;
-	protected String title;
+	private String title;
 	private String category;
 	private float cost;
 	public static final Comparator<Media> COMPARE_BY_TITLE_COST	= new MediaComparatorByTitleCost();
@@ -75,7 +75,7 @@ public abstract class Media {
         + ", Category = " + category + "\'"
         + ", Cost = " + cost + "}";
     }
-		public static void main(String[] args) {
+	public static void main(String[] args) {
 	    List<Media> mediae = new ArrayList<>();
 	    CompactDisc cd = new CompactDisc(1,"Soledad", "Ballad", 12.5f, "Alice", 123, "Bob");
 	    DigitalVideoDisc dvd = new DigitalVideoDisc(3,"Final Fantasy X", "Fantasy", 222.22f );
