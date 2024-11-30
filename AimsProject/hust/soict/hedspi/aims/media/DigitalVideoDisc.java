@@ -1,7 +1,6 @@
 //Dang Hong Minh - 20225740
 package AimsProject.hust.soict.hedspi.aims.media;
 public class DigitalVideoDisc extends Disc implements Playable {
-    //Attribute
     //Construct by id, title
 	public DigitalVideoDisc(int id, String title) {
 		super(id, title);
