@@ -3,7 +3,7 @@ package AimsProject.hust.soict.hedspi.aims.media;
 import java.util.*;
 public abstract class Media {
 	private int id;
-	protected String title;
+	private String title;
 	private String category;
 	private float cost;
 	public static final Comparator<Media> COMPARE_BY_TITLE_COST	= new MediaComparatorByTitleCost();
