@@ -70,9 +70,9 @@ public abstract class Media {
         return false;
     }
 	public String toString () {
-        return "Media{" + "ID = " + id
-        + ", Title = " + title + "\'"
-        + ", Category = " + category + "\'"
+        return "Media {ID = " + id
+        + ", Title = " + title
+        + ", Category = " + category
         + ", Cost = " + cost + "}";
     }
 	public static void main(String[] args) {
