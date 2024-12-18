@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "mainClass": "AimsProject.hust.soict.hedspi.aims.screen.StoreScreen",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_88f9d2b"
+        },
+        {
+            "type": "java",
             "name": "Painter",
             "request": "launch",
             "mainClass": "GUIProject.hust.soict.hedspi.javafx.Painter",
@@ -44,7 +51,7 @@
             "name": "Painter",
             "request": "launch",
             "mainClass": "GUIProject.hust.soict.hedspi.javafx.Painter",
-            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
         },
         {
             "type": "java",

@@ -134,7 +134,6 @@ public class StoreScreen extends JFrame {
 			new AddDVDToStoreScreen(store, cart);
 			dispose();
 		}
-
 	}
 	private class AddBookListener implements ActionListener {
 		@Override
