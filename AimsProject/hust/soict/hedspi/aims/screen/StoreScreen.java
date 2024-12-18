@@ -107,7 +107,7 @@ public class StoreScreen extends JFrame {
 	JPanel createHeader() {
 		JPanel header = new JPanel();
 		header.setLayout(new BoxLayout(header, BoxLayout.X_AXIS));
-		JLabel title = new JLabel("AIMS:~$ DucNH210192");
+		JLabel title = new JLabel("AIMS:~$ MinhDH5740");
 		title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 50));
 		title.setForeground(Color.CYAN);
 		JButton cart = new JButton("View cart");
