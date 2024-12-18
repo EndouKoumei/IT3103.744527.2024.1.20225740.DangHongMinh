@@ -17,13 +17,13 @@ public class StoreScreen extends JFrame {
 		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Goblin King", "Animation", "Someone", 87, 19.95f);
 		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Sci-fi", "George Lucas", 87, 24.95f);
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
-		Track track1 = new Track("Ep 1", 10);
-		Track track2 = new Track("Ep 2 + 3", 21);
-		Track track3 = new Track("Ep 4", 15);
-		CompactDisc cd1 = new CompactDisc("Bishoku - SS1", "Animation", "Various", 30.95f);
+		Track track1 = new Track("Mondstadt", 10);
+		Track track2 = new Track("Inazuma", 21);
+		Track track3 = new Track("Natlan", 15);
+		CompactDisc cd1 = new CompactDisc("Bisoku - SS1", "Animation", "Various", 30.95f);
 		cd1.addTrack(track1);
 		cd1.addTrack(track2);
-		CompactDisc cd2 = new CompactDisc("Bishoku - SS2", "Animation", "Various", 25.99f);
+		CompactDisc cd2 = new CompactDisc("Bisoku - SS2", "Animation", "Various", 25.99f);
 		cd2.addTrack(track3);
 		Book book1 = new Book("Vietnam Encyclopedia", "Science", 159.99f);
 		book1.addAuthor("Wei Zhu");

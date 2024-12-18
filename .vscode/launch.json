@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CartScreen",
+            "request": "launch",
+            "mainClass": "AimsProject.hust.soict.hedspi.aims.screen.CartScreen",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_88f9d2b"
+        },
+        {
+            "type": "java",
             "name": "StoreScreen",
             "request": "launch",
             "mainClass": "AimsProject.hust.soict.hedspi.aims.screen.StoreScreen",
