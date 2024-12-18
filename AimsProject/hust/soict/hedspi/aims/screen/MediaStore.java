@@ -101,8 +101,8 @@ public class MediaStore extends JPanel {
 		public void actionPerformed(ActionEvent e) {
 			JPanel p = new JPanel();
 			JDialog d = new JDialog();
-			JLabel l = new JLabel("<html>" + media.getDetails().replaceAll("\n", "<br/>") + "</html>",
-					SwingConstants.CENTER);
+			JLabel l = new JLabel("<html>" + media.getDetails().replaceAll("\n", "<br/>")
+			+ "</html>", SwingConstants.CENTER);
 			p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
 			l.setAlignmentX(Component.CENTER_ALIGNMENT);
 			p.add(Box.createVerticalGlue());
