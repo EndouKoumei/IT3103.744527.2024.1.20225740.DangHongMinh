@@ -2,9 +2,13 @@
 package AimsProject.hust.soict.hedspi.aims.media;
 import java.util.Comparator;
 public class MediaComparatorByCostTitle implements Comparator<Media> {
-	public int compare(Media media1, Media media2) {
-        return Comparator.comparing(Media::getCost)
-                .thenComparing(Media::getTitle)
-                .compare(media1, media2);
-    }    
+        public int compare(Media m1, Media m2) {
+		if (m1.getCost() < m2.getCost()) {
+			return 1;
+		} else if (m1.getCost() > m2.getCost()) {
+			return -1;
+		} else {
+			return m1.getTitle().compareToIgnoreCase(m2.getTitle());
+		}
+	}
 }

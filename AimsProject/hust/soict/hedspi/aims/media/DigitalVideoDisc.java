@@ -1,39 +1,59 @@
 //Dang Hong Minh - 20225740
 package AimsProject.hust.soict.hedspi.aims.media;
-public class DigitalVideoDisc extends Disc implements Playable {
-    //Construct by id, title
-	public DigitalVideoDisc(int id, String title) {
-		super(id, title);
+import AimsProject.hust.soict.hedspi.aims.exception.*;
+import java.awt.*;
+import javax.swing.*;
+public class DigitalVideoDisc extends Disc {
+	public String getType() {
+		return "DVD";
 	}
-	//Construct by id, title, cost
-	public DigitalVideoDisc(int id, String title, float cost) {
-		this(id, title);
-		this.setCost(cost);
+	public String getDetails() {
+		return ("Product ID: " + String.valueOf(this.getId())
+				+ "\n" + "\t" + "Title: " + this.getTitle()
+				+ "\n" + "\t" + "Category: " + this.getCategory()
+				+ "\n" + "\t" + "Director: " + this.getDirector()
+				+ "\n" + "\t" + "Length: " + String.valueOf(this.getLength()) + " minutes"
+				+ "\n" + "\t" + "Price: $" + String.valueOf(this.getCost()));
 	}
-	//Construct by id, title, category, cost 
-	public DigitalVideoDisc(int id, String title, String category, float cost) {
-		this(id, title, cost);
-		this.setCategory(category);
+	public void play() throws PlayerException {
+		if (this.getLength() <= 0) {
+			throw new PlayerException("ERROR: DVD length is non-positive!");
+		} else {
+			System.out.println("Playing DVD: " + this.getTitle());
+			System.out.println("DVD length: " + this.getLength());
+			Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+			JPanel p = new JPanel();
+			JDialog d = new JDialog();
+			JLabel l1 = new JLabel("Now playing: " + this.getTitle());
+			JLabel l2 = new JLabel("DVD length: " + this.getLength());
+			p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
+			l1.setAlignmentX(Component.CENTER_ALIGNMENT);
+			l2.setAlignmentX(Component.CENTER_ALIGNMENT);
+			d.setTitle("Media Player");
+			p.add(Box.createVerticalGlue());
+			p.add(l1);
+			p.add(l2);
+			p.add(Box.createVerticalGlue());
+			d.add(p);
+			d.setSize(250,100);
+			int w = d.getSize().width;
+	        int h = d.getSize().height;
+	        int x = (dim.width - w) / 2;
+	        int y = (dim.height - h) / 2;
+			d.setLocation(x, y);
+			d.setVisible(true);
+		}
 	}
-    //Construct by id, title, category, director, cost 
-    public DigitalVideoDisc(int id, String title, String category, String director, float cost) {
-		this(id, title, category, cost);
-		this.setDirector(director);
+	public DigitalVideoDisc(String title) {
+		super(title);
 	}
-	//Construct by id, title, category, director, length, cost
-    public DigitalVideoDisc(int id, String title, String category, String director, int length, float cost) {
-		this(id, title, category, director, cost);
-		this.setLength(length);
-    }
-	//Print DVD
-	@Override
-	public void print() {
-		System.out.println(getId() + ". DVD: " + getTitle() + " - " + getDirector()
-		+ " - " + getCategory() + " - " + getLength() + ": " + getCost() + "$");
+	public DigitalVideoDisc(String title, String category, float cost) {
+		super(title, category, cost);
 	}
-	//Play DVD
-	public void play() {
-		System.out.println("Playing DVD: " + this.getTitle());
-		System.out.println("DVD length: " + this.getLength());
-    }
+	public DigitalVideoDisc(String title, String category, String director, float cost) {
+		super(title, category, director, cost);
+	}
+	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+		super(title, category, director, length, cost);
+	}
 }

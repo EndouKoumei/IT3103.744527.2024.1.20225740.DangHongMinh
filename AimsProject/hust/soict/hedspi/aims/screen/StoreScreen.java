@@ -14,25 +14,25 @@ public class StoreScreen extends JFrame {
 		Store myStore = new Store();
 		Cart myCart = new Cart();
 		//Create media
-		DigitalVideoDisc dvd1 = new DigitalVideoDisc(1, "The Goblin King", "Animation", "Someone", 87, 19.95f);
-		DigitalVideoDisc dvd2 = new DigitalVideoDisc(2, "Star Wars", "Sci-fi", "George Lucas", 87, 24.95f);
-		DigitalVideoDisc dvd3 = new DigitalVideoDisc(3, "Aladin", "Animation", 18.99f);
-		Track track1 = new Track("Ep 1", 10);
-		Track track2 = new Track("Ep 2 + 3", 21);
-		Track track3 = new Track("Ep 4", 15);
-		CompactDisc cd1 = new CompactDisc(1, "Bishoku - SS1", "Drama", 30.95f, "Various", 154, "Various");
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Goblin King", "Animation", "Someone", 87, 19.95f);
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Sci-fi", "George Lucas", 87, 24.95f);
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+		Track track1 = new Track("Mondstadt", 10);
+		Track track2 = new Track("Inazuma", 21);
+		Track track3 = new Track("Natlan", 15);
+		CompactDisc cd1 = new CompactDisc("Bisoku - SS1", "Animation", "Various", 30.95f);
 		cd1.addTrack(track1);
 		cd1.addTrack(track2);
-		CompactDisc cd2 = new CompactDisc(2, "Bishoku - SS2", "Drama", 25.99f, "Various", 142, "Various");
+		CompactDisc cd2 = new CompactDisc("Bisoku - SS2", "Animation", "Various", 25.99f);
 		cd2.addTrack(track3);
-		Book book1 = new Book(1, "Vietnam Encyclopedia", "Science", 159.99f);
+		Book book1 = new Book("Vietnam Encyclopedia", "Science", 159.99f);
 		book1.addAuthor("Wei Zhu");
-		Media dvd4 = new DigitalVideoDisc(4, "Movie 04", "Genre C", "Director", 120, 12.90f);
-		Media dvd5 = new DigitalVideoDisc(5, "Movie 05", "Genre D", "Director", 90, 9.9f);
-		Media dvd6 = new DigitalVideoDisc(6, "Movie 06", "Genre C", "Director", 100, 11.88f);
-		Media dvd7 = new DigitalVideoDisc(7, "Movie 07", "Genre E", "Director", 89, 8.68f);
-		Media dvd8 = new DigitalVideoDisc(8, "Movie 08", "Genre F", "Also Director", 180, 20.1f);
-		Media dvd9 = new DigitalVideoDisc(9, "Movie 09", "Genre F", "Also Director", 160, 18.4f);
+		Media dvd4 = new DigitalVideoDisc("Movie 04", "Genre C", "Director", 120, 12.90f);
+		Media dvd5 = new DigitalVideoDisc("Movie 05", "Genre D", "Director", 90, 9.9f);
+		Media dvd6 = new DigitalVideoDisc("Movie 06", "Genre C", "Director", 100, 11.88f);
+		Media dvd7 = new DigitalVideoDisc("Movie 07", "Genre E", "Director", 89, 8.68f);
+		Media dvd8 = new DigitalVideoDisc("Movie 08", "Genre F", "Also Director", 180, 20.1f);
+		Media dvd9 = new DigitalVideoDisc("Movie 09", "Genre F", "Also Director", 160, 18.4f);
 		//Add media
 		myStore.addMedia(dvd1);
 		myStore.addMedia(dvd2);
@@ -134,7 +134,6 @@ public class StoreScreen extends JFrame {
 			new AddDVDToStoreScreen(store, cart);
 			dispose();
 		}
-
 	}
 	private class AddBookListener implements ActionListener {
 		@Override
