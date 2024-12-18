@@ -1,0 +1,2 @@
+14. Update the Aims class
+- The Aims class must be updated to handle any exceptions generated when the play() methods are called. When we don't update for them to use "try-catch" blocks, the program becomes more susceptible to crashes or unpredictable behavior (Classes using play() methods won't work).
