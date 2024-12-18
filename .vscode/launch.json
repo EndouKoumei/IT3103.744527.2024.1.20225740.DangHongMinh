@@ -1,0 +1,190 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Aims",
+            "request": "launch",
+            "mainClass": "AimsProject.hust.soict.hedspi.aims.Aims",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "Media",
+            "request": "launch",
+            "mainClass": "AimsProject.hust.soict.hedspi.aims.media.Media",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "mainClass": "AimsProject.hust.soict.hedspi.aims.screen.StoreScreen",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "Painter",
+            "request": "launch",
+            "mainClass": "GUIProject.hust.soict.hedspi.javafx.Painter",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a",
+            "vmArgs": "--module-path C:/Users/ADMIN/Downloads/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "AWTAccumulator",
+            "request": "launch",
+            "mainClass": "GUIProject.hust.soict.hedspi.swing.AWTAccumulator",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "NumberGrid",
+            "request": "launch",
+            "mainClass": "GUIProject.hust.soict.hedspi.swing.NumberGrid",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "SwingAccumulator",
+            "request": "launch",
+            "mainClass": "GUIProject.hust.soict.hedspi.swing.SwingAccumulator",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "ArrayDisplay",
+            "request": "launch",
+            "mainClass": "OtherProjects.ArrayDisplay",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "OtherProjects.Calculator",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "ChoosingOption",
+            "request": "launch",
+            "mainClass": "OtherProjects.ChoosingOption",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "DaysInMonth",
+            "request": "launch",
+            "mainClass": "OtherProjects.DaysInMonth",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "FirstDegreeEquation",
+            "request": "launch",
+            "mainClass": "OtherProjects.FirstDegreeEquation",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "FirstDegreeSystem",
+            "request": "launch",
+            "mainClass": "OtherProjects.FirstDegreeSystem",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "FirstDialog",
+            "request": "launch",
+            "mainClass": "OtherProjects.FirstDialog",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "HelloNameDialog",
+            "request": "launch",
+            "mainClass": "OtherProjects.HelloNameDialog",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "OtherProjects.HelloWorld",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "InputFromKeyboard",
+            "request": "launch",
+            "mainClass": "OtherProjects.InputFromKeyboard",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "MatrixAddition",
+            "request": "launch",
+            "mainClass": "OtherProjects.MatrixAddition",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "SecondDegreeEquation",
+            "request": "launch",
+            "mainClass": "OtherProjects.SecondDegreeEquation",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "ShowTwoNumbers",
+            "request": "launch",
+            "mainClass": "OtherProjects.ShowTwoNumbers",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "TriangleDisplay",
+            "request": "launch",
+            "mainClass": "OtherProjects.TriangleDisplay",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "ConcatenationInLoops",
+            "request": "launch",
+            "mainClass": "OtherProjects.hust.soict.hedpsi.garbage.ConcatenationInLoops",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "CreateSampleFile",
+            "request": "launch",
+            "mainClass": "OtherProjects.hust.soict.hedpsi.garbage.CreateSampleFile",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "GarbageCreator",
+            "request": "launch",
+            "mainClass": "OtherProjects.hust.soict.hedpsi.garbage.GarbageCreator",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        },
+        {
+            "type": "java",
+            "name": "NoGarbage",
+            "request": "launch",
+            "mainClass": "OtherProjects.hust.soict.hedpsi.garbage.NoGarbage",
+            "projectName": "IT3103.744527.2024.1.20225740.DangHongMinh_f58eeb5a"
+        }
+    ]
+}
