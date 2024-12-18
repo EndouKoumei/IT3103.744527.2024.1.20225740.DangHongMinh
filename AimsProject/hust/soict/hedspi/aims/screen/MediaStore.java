@@ -1,16 +1,19 @@
-//Dang Hong Minh
+//Dang Hong Minh - 20225740
 package AimsProject.hust.soict.hedspi.aims.screen;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import AimsProject.hust.soict.hedspi.aims.exception.*;
 import AimsProject.hust.soict.hedspi.aims.media.*;
-import AimsProject.hust.soict.hedspi.aims.cart.*;
+import AimsProject.hust.soict.hedspi.aims.cart.Cart;
 public class MediaStore extends JPanel {
-    private Media media;
-    public MediaStore(Media media, Cart cart) {
-        this.media = media;
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        JLabel title = new JLabel(media.getTitle());
+	private Media media;
+	private Cart cart;
+	public MediaStore(Media media, Cart cart) {
+		this.media = media;
+		this.cart = cart;
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		JLabel title = new JLabel(media.getTitle());
 		title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 20));
 		title.setAlignmentX(CENTER_ALIGNMENT);
 		JLabel cost = new JLabel("" + media.getCost() + " $");
@@ -35,7 +38,7 @@ public class MediaStore extends JPanel {
 		this.add(container);
 		this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 	}
-    private class PlayButtonListener implements ActionListener {
+	private class PlayButtonListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			try {
@@ -98,8 +101,8 @@ public class MediaStore extends JPanel {
 		public void actionPerformed(ActionEvent e) {
 			JPanel p = new JPanel();
 			JDialog d = new JDialog();
-			JLabel l = new JLabel("<html>" + media.getDetails().
-            replaceAll("\n", "<br/>") + "</html>", SwingConstants.CENTER);
+			JLabel l = new JLabel("<html>" + media.getDetails().replaceAll("\n", "<br/>") + "</html>",
+					SwingConstants.CENTER);
 			p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
 			l.setAlignmentX(Component.CENTER_ALIGNMENT);
 			p.add(Box.createVerticalGlue());

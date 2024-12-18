@@ -1,31 +1,30 @@
 //Dang Hong Minh - 20225740
 package AimsProject.hust.soict.hedspi.aims.media;
-public class Disc extends Media {
-	private int length;
+public abstract class Disc extends Media implements Playable {
 	private String director;
-    public Disc(int id, String title) {
-        super(id, title);
-    } 
-	public Disc(int id, String title, String category, float cost) {
-		super(id,title, category, cost);
-	}
-	public Disc(int id, String title, String category, float cost, String director, int length) {
-		super(id, title, category, cost);
-		this.length = length;
+	private int length;
+	public Disc(String title, String category, String director, float cost) {
+		super(title, category, cost);
 		this.director = director;
 	}
-	public int getLength() {
-		return length;
-	}
-	public void setLength(int length) {
+	public Disc(String title, String category, String director, int length, float cost) {
+		super(title, category, cost);
+		this.director = director;
 		this.length = length;
+	}
+	public Disc(String title, String category, float cost) {
+		super(title, category, cost);
+	}
+	public Disc(String title, String category) {
+		super(title, category);
+	}
+	public Disc(String title) {
+		super(title);
 	}
 	public String getDirector() {
 		return director;
 	}
-	public void setDirector(String director) {
-		this.director = director;
-	}
-	public void play() {
+	public int getLength() {
+		return length;
 	}
 }
